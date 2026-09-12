@@ -1,0 +1,20 @@
+<section class="section" id="innovation" aria-labelledby="innovation-title">
+    <div class="container">
+        <div class="section__header section__header--center">
+            <p class="section__eyebrow">What We Do</p>
+            <h2 id="innovation-title" class="section__title">Our Areas of Innovation</h2>
+        </div>
+
+        <div class="card-grid card-grid--4">
+            {% for area in innovation_areas %}
+                <article class="card card--innovation">
+                    <div class="card__icon" aria-hidden="true">
+                        {% include "website/partials/icons.html" with name=area.icon %}
+                    </div>
+                    <h3 class="card__title">{{ area.title }}</h3>
+                    <p class="card__text">{{ area.description }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

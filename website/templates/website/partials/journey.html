@@ -1,0 +1,22 @@
+<section class="section" id="journey" aria-labelledby="journey-title">
+    <div class="container">
+        <div class="section__header section__header--center">
+            <p class="section__eyebrow">Our Process</p>
+            <h2 id="journey-title" class="section__title">From Idea to Impact</h2>
+        </div>
+
+        <div class="timeline">
+            {% for step in journey_steps %}
+                <article class="timeline__step">
+                    <div class="timeline__marker">
+                        <span class="timeline__number">{{ step.step }}</span>
+                    </div>
+                    <div class="timeline__content">
+                        <h3 class="timeline__title">{{ step.title }}</h3>
+                        <p class="timeline__text">{{ step.description }}</p>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

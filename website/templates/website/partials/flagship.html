@@ -1,0 +1,18 @@
+<section class="section section--alt" id="building" aria-labelledby="building-title">
+    <div class="container">
+        <div class="section__header section__header--center">
+            <p class="section__eyebrow">Flagship Initiatives</p>
+            <h2 id="building-title" class="section__title">What We're Building</h2>
+        </div>
+
+        <div class="card-grid card-grid--3">
+            {% for initiative in flagship_initiatives %}
+                <article class="card card--flagship">
+                    <span class="card__number">{{ forloop.counter|stringformat:"02d" }}</span>
+                    <h3 class="card__title">{{ initiative.title }}</h3>
+                    <p class="card__text">{{ initiative.description }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

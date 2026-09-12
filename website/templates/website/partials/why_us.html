@@ -1,0 +1,17 @@
+<section class="section section--alt" id="why-us" aria-labelledby="why-title">
+    <div class="container">
+        <div class="section__header section__header--center">
+            <p class="section__eyebrow">Why Us</p>
+            <h2 id="why-title" class="section__title">Why Innovative Solutions?</h2>
+        </div>
+
+        <div class="why-grid">
+            {% for item in why_us %}
+                <article class="why-card">
+                    <h3 class="why-card__title">{{ item.title }}</h3>
+                    <p class="why-card__text">{{ item.description }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
