@@ -1,0 +1,16 @@
+# Pings Render so the free-tier web service does not idle out (~15 min).
+# Repo → Settings → Secrets and variables → Actions → RENDER_HEALTH_URL
+# Example: https://your-app.onrender.com/health/
+name: Render keepalive
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Health check
+        run: curl -fsS --max-time 90 "${{ secrets.RENDER_HEALTH_URL }}"

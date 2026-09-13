@@ -19,6 +19,11 @@ from .forms import ContactForm
 logger = logging.getLogger(__name__)
 
 
+@require_http_methods(["GET"])
+def health(request):
+    return JsonResponse({"status": "ok"})
+
+
 def home(request):
     context = {
         "site": SITE,
