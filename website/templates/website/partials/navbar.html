@@ -1,7 +1,15 @@
+{% load static %}
 <header class="navbar" id="top">
     <div class="container navbar__inner">
         <a href="#top" class="navbar__brand">
-            <span class="navbar__brand-mark">IS</span>
+            <img
+                class="navbar__brand-logo"
+                src="{% static 'images/gnovatech-icon.jpg' %}"
+                alt="House of GnOvATech — Innovative Solutions"
+                width="44"
+                height="44"
+                decoding="async"
+            >
             <span class="navbar__brand-text">
                 <strong>Innovative Solutions</strong>
                 <small>House of GnOvATech</small>

@@ -131,7 +131,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Email
 CONTACT_RECIPIENT_EMAIL = os.environ.get(
     "CONTACT_RECIPIENT_EMAIL",
-    "saptaswadas2003@gmail.com",
+    "gnovatech2026@gmail.com",
 )
 EMAIL_HOST = os.environ.get("EMAIL_HOST", "smtp.gmail.com")
 EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "587"))
