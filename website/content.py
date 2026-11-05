@@ -164,3 +164,27 @@ CONTACT = {
         "that can create meaningful impact."
     ),
 }
+
+GURUCOOL_AD = {
+    "eyebrow": "GuruCool by GnOvATech",
+    "title": "NEET 2027 preparation",
+    "whatsapp": "919836483772",
+    "whatsapp_display": "+91 9836483772",
+    "email": "gnovatech2026@gmail.com",
+    "slides": [
+        {
+            "image": "images/gurucool-neet-2027-fees.jpg",
+            "alt": (
+                "GuruCool NEET 2027 fee structure for regular, dropper, "
+                "and two-year programmes, Salt Lake offline centre"
+            ),
+        },
+        {
+            "image": "images/gurucool-dr-moulina-neet.jpg",
+            "alt": (
+                "GuruCool flyer introducing Dr. Moulina Mukherjee, NEET faculty, "
+                "with scholarship and enrollment offers"
+            ),
+        },
+    ],
+}

@@ -8,6 +8,7 @@ from .content import (
     ABOUT,
     CONTACT,
     FLAGSHIP_INITIATIVES,
+    GURUCOOL_AD,
     INNOVATION_AREAS,
     JOURNEY_STEPS,
     SITE,
@@ -33,6 +34,7 @@ def home(request):
         "journey_steps": JOURNEY_STEPS,
         "why_us": WHY_US,
         "contact": CONTACT,
+        "gurucool": GURUCOOL_AD,
         "form": ContactForm(),
     }
     return render(request, "website/home.html", context)

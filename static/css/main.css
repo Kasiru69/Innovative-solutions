@@ -579,6 +579,42 @@ a {
     line-height: 1.55;
 }
 
+/* ── GuruCool promo ────────────────────────────────────────── */
+.gurucool-promo__stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 640px;
+    margin-inline: auto;
+}
+
+.gurucool-promo__item {
+    margin: 0;
+}
+
+.gurucool-promo__item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.gurucool-promo__contact {
+    margin-top: 1.25rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+.gurucool-promo__contact a {
+    color: var(--color-accent);
+}
+
+.gurucool-promo__contact a:hover {
+    text-decoration: underline;
+}
+
 /* ── Contact ───────────────────────────────────────────────── */
 .section--contact {
     padding-bottom: 4rem;
