@@ -8,7 +8,7 @@ SITE = {
         "market-ready products and practical solutions."
     ),
     "founder": "Debdeep Chattopadhyay",
-    "founder_title": "Founder & CEO",
+    "founder_title": "Proprietor",
     "footer_tagline": "From Ideas to Impact",
 }
 
