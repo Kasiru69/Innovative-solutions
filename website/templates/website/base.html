@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"{% if site.diwali.enabled %} class="theme-diwali"{% endif %}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,16 @@
     <title>{{ site.name }} | {{ site.tagline }}</title>
     <link rel="icon" href="{% static 'images/gnovatech-icon.jpg' %}" type="image/jpeg">
     <link rel="apple-touch-icon" href="{% static 'images/gnovatech-icon.jpg' %}">
-    <meta name="theme-color" content="#070b14">
+    <meta name="theme-color" content="{% if site.diwali.enabled %}#120818{% else %}#070b14{% endif %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
-<body>
+<body{% if site.diwali.enabled %} class="theme-diwali"{% endif %}>
+    {% if site.diwali.enabled %}
+        {% include "website/partials/festive_banner.html" %}
+    {% endif %}
     {% include "website/partials/navbar.html" %}
 
     <main>

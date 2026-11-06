@@ -10,6 +10,12 @@ SITE = {
     "founder": "Debdeep Chattopadhyay",
     "founder_title": "Proprietor",
     "footer_tagline": "From Ideas to Impact",
+    # Seasonal: set enabled False after Diwali to restore default colours.
+    "diwali": {
+        "enabled": True,
+        "banner": "Happy Diwali — light, prosperity and new ideas from House of GnOvATech",
+        "footer_line": "Wishing you a bright and prosperous Diwali.",
+    },
 }
 
 ABOUT = {

@@ -6,6 +6,9 @@
             <p class="footer__tagline"><em>{{ site.footer_tagline }}</em></p>
         </div>
         <div class="footer__meta">
+            {% if site.diwali.enabled %}
+                <p class="footer__festive">{{ site.diwali.footer_line }}</p>
+            {% endif %}
             <p>{{ site.founder_title }}: <strong>{{ site.founder }}</strong></p>
             <p class="footer__copy">&copy; {% now "Y" %} {{ site.name }}. All rights reserved.</p>
         </div>

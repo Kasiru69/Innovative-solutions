@@ -9,8 +9,10 @@
     --color-text-muted: #94a3b8;
     --color-accent: #14b8a6;
     --color-accent-light: #2dd4bf;
-    --color-accent-glow: rgba(20, 184, 166, 0.25);
+    --color-accent-rgb: 20, 184, 166;
+    --color-accent-glow: rgba(var(--color-accent-rgb), 0.25);
     --color-indigo: #6366f1;
+    --color-indigo-rgb: 99, 102, 241;
 
     --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
     --font-body: "Inter", system-ui, sans-serif;
@@ -20,6 +22,7 @@
     --radius-lg: 20px;
     --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     --transition: 0.25s ease;
+    --festive-banner-h: 0;
 }
 
 /* ── Reset & base ──────────────────────────────────────────── */
@@ -36,6 +39,10 @@ html {
     scroll-padding-top: 80px;
 }
 
+html.theme-diwali {
+    scroll-padding-top: 118px;
+}
+
 body {
     font-family: var(--font-body);
     font-size: 1rem;
@@ -43,6 +50,26 @@ body {
     color: var(--color-text);
     background: var(--color-bg);
     -webkit-font-smoothing: antialiased;
+    position: relative;
+}
+
+body.theme-diwali {
+    --festive-banner-h: 2.375rem;
+    --color-bg: #0a0612;
+    --color-bg-alt: #120a18;
+    --color-surface: #1a1022;
+    --color-surface-hover: #23142e;
+    --color-accent: #f59e0b;
+    --color-accent-light: #fbbf24;
+    --color-accent-rgb: 245, 158, 11;
+    --color-indigo: #c084fc;
+    --color-indigo-rgb: 192, 132, 252;
+    --color-accent-glow: rgba(var(--color-accent-rgb), 0.28);
+    background:
+        radial-gradient(ellipse 120% 80% at 50% -20%, rgba(217, 119, 6, 0.12), transparent 55%),
+        radial-gradient(ellipse 60% 50% at 100% 40%, rgba(180, 83, 9, 0.08), transparent 50%),
+        radial-gradient(ellipse 50% 40% at 0% 60%, rgba(234, 179, 8, 0.06), transparent 45%),
+        var(--color-bg);
 }
 
 img, svg {
@@ -131,7 +158,7 @@ a {
 /* ── Navbar ────────────────────────────────────────────────── */
 .navbar {
     position: fixed;
-    top: 0;
+    top: var(--festive-banner-h);
     left: 0;
     right: 0;
     z-index: 100;
@@ -145,6 +172,10 @@ a {
     -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 1px 0 var(--color-border);
     padding: 0.65rem 0;
+}
+
+body.theme-diwali .navbar--scrolled {
+    background: rgba(10, 6, 18, 0.9);
 }
 
 .navbar__inner {
@@ -265,13 +296,80 @@ a {
     transform: translateY(-7px) rotate(-45deg);
 }
 
+body.theme-diwali .navbar__cta {
+    color: var(--color-bg) !important;
+}
+
+/* ── Festive top banner (Diwali) ─────────────────────────────── */
+.festive-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--festive-banner-h);
+    padding: 0.45rem 1rem;
+    margin: 0;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #fffbeb;
+    background: linear-gradient(
+        90deg,
+        #7c2d12 0%,
+        #b45309 35%,
+        #d97706 50%,
+        #b45309 65%,
+        #7c2d12 100%
+    );
+    border-bottom: 1px solid rgba(251, 191, 36, 0.35);
+    box-shadow: 0 4px 24px rgba(180, 83, 9, 0.35);
+}
+
+.festive-banner__glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 80% 200% at 50% 0%,
+        rgba(253, 224, 71, 0.35),
+        transparent 55%
+    );
+    pointer-events: none;
+}
+
+.festive-banner__text {
+    position: relative;
+    z-index: 1;
+    max-width: min(52rem, 100%);
+    line-height: 1.35;
+}
+
+@media (max-width: 480px) {
+    body.theme-diwali {
+        --festive-banner-h: 3.25rem;
+    }
+
+    .festive-banner {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    html.theme-diwali {
+        scroll-padding-top: 128px;
+    }
+}
+
 /* ── Hero ──────────────────────────────────────────────────── */
 .hero {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 0 5rem;
+    padding: calc(8rem + var(--festive-banner-h)) 0 5rem;
     overflow: hidden;
 }
 
@@ -279,9 +377,9 @@ a {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(20, 184, 166, 0.15), transparent),
-        radial-gradient(ellipse 50% 40% at 80% 60%, rgba(99, 102, 241, 0.1), transparent),
-        radial-gradient(ellipse 40% 30% at 10% 80%, rgba(20, 184, 166, 0.08), transparent),
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(var(--color-accent-rgb), 0.15), transparent),
+        radial-gradient(ellipse 50% 40% at 80% 60%, rgba(var(--color-indigo-rgb), 0.1), transparent),
+        radial-gradient(ellipse 40% 30% at 10% 80%, rgba(var(--color-accent-rgb), 0.08), transparent),
         var(--color-bg);
 }
 
@@ -387,8 +485,8 @@ a {
     font-size: 0.8125rem;
     font-weight: 500;
     color: var(--color-accent-light);
-    background: rgba(20, 184, 166, 0.08);
-    border: 1px solid rgba(20, 184, 166, 0.2);
+    background: rgba(var(--color-accent-rgb), 0.08);
+    border: 1px solid rgba(var(--color-accent-rgb), 0.2);
     border-radius: 999px;
 }
 
@@ -416,7 +514,7 @@ a {
 
 .card:hover {
     transform: translateY(-4px);
-    border-color: rgba(20, 184, 166, 0.3);
+    border-color: rgba(var(--color-accent-rgb), 0.3);
     box-shadow: var(--shadow);
 }
 
@@ -427,7 +525,7 @@ a {
     place-items: center;
     margin-bottom: 1.25rem;
     color: var(--color-accent);
-    background: rgba(20, 184, 166, 0.1);
+    background: rgba(var(--color-accent-rgb), 0.1);
     border-radius: var(--radius);
 }
 
@@ -521,7 +619,7 @@ a {
     font-weight: 700;
     color: var(--color-accent-light);
     background: var(--color-surface);
-    border: 2px solid rgba(20, 184, 166, 0.4);
+    border: 2px solid rgba(var(--color-accent-rgb), 0.4);
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -529,7 +627,7 @@ a {
 }
 
 .timeline__step:hover .timeline__number {
-    background: rgba(20, 184, 166, 0.15);
+    background: rgba(var(--color-accent-rgb), 0.15);
     border-color: var(--color-accent);
     transform: scale(1.08);
 }
@@ -799,6 +897,12 @@ a {
     color: var(--color-text-muted);
 }
 
+.footer__festive {
+    font-size: 0.875rem;
+    color: var(--color-accent-light);
+    margin-bottom: 0.5rem;
+}
+
 .footer__meta strong {
     color: var(--color-text);
 }
@@ -856,6 +960,11 @@ a {
         border-left: 1px solid var(--color-border);
         transform: translateX(100%);
         transition: transform var(--transition);
+    }
+
+    body.theme-diwali .navbar__links {
+        top: var(--festive-banner-h);
+        background: rgba(10, 6, 18, 0.98);
     }
 
     .navbar__links.is-open {

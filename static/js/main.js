@@ -38,7 +38,11 @@
 
     /* Active nav link on scroll */
     function setActiveLink() {
-        const scrollPos = window.scrollY + 120;
+        const offset =
+            (document.documentElement && document.documentElement.classList.contains("theme-diwali")
+                ? 158
+                : 120);
+        const scrollPos = window.scrollY + offset;
 
         sections.forEach(function (section) {
             const top = section.offsetTop;
