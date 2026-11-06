@@ -1,11 +1,11 @@
 SITE = {
     "name": "Innovative Solutions",
     "tagline": "from the House of GnOvATech",
-    "headline": "Building Next-Generation Solutions",
+    "headline": "From Ideas to MVP Ready",
     "description": (
-        "We are an innovation platform focused on developing practical solutions "
-        "across Healthcare, Biotechnology, Artificial Intelligence, Electronics, "
-        "Digital Health, Education and Deep-Tech."
+        "Innovative Solutions is the product development and innovation arm of "
+        "House of GnOvATech, dedicated to transforming promising ideas into "
+        "market-ready products and practical solutions."
     ),
     "founder": "Debdeep Chattopadhyay",
     "founder_title": "Founder & CEO",
@@ -13,64 +13,66 @@ SITE = {
 }
 
 ABOUT = {
-    "title": "About Innovative Solutions",
+    "title": "Innovative Solutions",
     "body": (
-        "Innovative Solutions is an early-stage venture platform from the House of "
-        "GnOvATech focused on turning promising ideas into practical, scalable "
-        "products and services."
+        "Innovative Solutions is the product development and innovation arm of "
+        "House of GnOvATech. We focus on transforming promising ideas into "
+        "market-ready products—through validation, design, prototyping and "
+        "routes to commercialisation."
     ),
-    "vision_intro": "Our vision is to build an integrated innovation ecosystem spanning:",
+    "vision_intro": "Our work spans integrated domains and capabilities:",
     "domains": [
-        "Healthcare",
-        "AI",
-        "Biotechnology",
-        "Electronics",
-        "Digital Health",
-        "Education",
-        "Deep-Tech",
+        "Product & MVP",
+        "Generative AI",
+        "Healthcare & EHR",
+        "Biotech & Deep-Tech",
+        "Patents & Scale-up",
+        "Smart Manufacturing",
     ],
 }
 
 INNOVATION_AREAS = [
     {
-        "title": "Healthcare & Medical Technology",
-        "description": "Smart diagnostics, monitoring and connected healthcare",
-        "icon": "healthcare",
+        "step": "01",
+        "title": "Idea validation, incubation & MVP",
+        "description": "Idea validation, incubation and MVP development.",
+        "icon": "incubation",
     },
     {
-        "title": "Artificial Intelligence",
-        "description": "AI applications, employee interfaces and automation",
+        "step": "02",
+        "title": "Generative AI & intelligent interfaces",
+        "description": (
+            "Generative AI-powered applications and intelligent employee interfaces."
+        ),
         "icon": "ai",
     },
     {
-        "title": "Biotechnology & Life Sciences",
-        "description": "Research-support tools and biotech innovation",
+        "step": "03",
+        "title": "Healthcare technology",
+        "description": (
+            "Healthcare technology, app-based EHR and medical equipment."
+        ),
+        "icon": "healthcare",
+    },
+    {
+        "step": "04",
+        "title": "Biotech, electronics & deep-tech",
+        "description": "Biotechnology, electronics and deep-tech innovation.",
         "icon": "biotech",
     },
     {
-        "title": "Digital Health & EHR",
-        "description": "Digital patient records and healthcare workflows",
-        "icon": "digital-health",
+        "step": "05",
+        "title": "Prototyping, patents & commercialisation",
+        "description": (
+            "Prototyping, patent facilitation and commercialisation support."
+        ),
+        "icon": "patent",
     },
     {
-        "title": "Electronics & Embedded Technology",
-        "description": "Sensors, connected devices and IoT",
-        "icon": "electronics",
-    },
-    {
-        "title": "Education Technology",
-        "description": "AI-enabled learning and skill development",
-        "icon": "education",
-    },
-    {
-        "title": "Global Trade",
-        "description": "Technology and healthcare product sourcing and market access",
-        "icon": "trade",
-    },
-    {
-        "title": "Incubation & Prototyping",
-        "description": "Idea validation, prototyping and commercialization",
-        "icon": "incubation",
+        "step": "06",
+        "title": "Advanced technology & smart manufacturing",
+        "description": "Advanced technology and smart manufacturing.",
+        "icon": "manufacturing",
     },
 ]
 
@@ -166,8 +168,52 @@ CONTACT = {
 }
 
 GURUCOOL_AD = {
-    "eyebrow": "GuruCool by GnOvATech",
-    "title": "NEET 2027 preparation",
+    "eyebrow": "Education & career development",
+    "title": "GuruCool by GnOvATech",
+    "subtitle": "(Online and offline learning opportunities)",
+    "body": (
+        "GuruCool is our education and career-development venture, focused on making "
+        "quality learning accessible, affordable and future-ready. We empower learners "
+        "through academic guidance, competitive examination preparation and "
+        "skill-oriented education both in online (app interface) and offline mode "
+        "(Kolkata)."
+    ),
+    "what_we_offer": [
+        {
+            "step": "01",
+            "title": "School education & tutoring",
+            "description": "School education and academic tutoring.",
+            "icon": "school-tutoring",
+        },
+        {
+            "step": "02",
+            "title": "Entrance exam preparation",
+            "description": (
+                "NEET and JEE and other entrance exams preparation."
+            ),
+            "icon": "entrance-exams",
+        },
+        {
+            "step": "03",
+            "title": "Spoken English & communication",
+            "description": "Spoken English and communication skills.",
+            "icon": "spoken-english",
+        },
+        {
+            "step": "04",
+            "title": "AI, data & technology",
+            "description": "AI, data analytics and technology education.",
+            "icon": "tech-education",
+        },
+        {
+            "step": "05",
+            "title": "Career guidance & programmes",
+            "description": (
+                "Career counselling, quizzes and knowledge programmes."
+            ),
+            "icon": "career-guidance",
+        },
+    ],
     "whatsapp": "919836483772",
     "whatsapp_display": "+91 9836483772",
     "email": "gnovatech2026@gmail.com",

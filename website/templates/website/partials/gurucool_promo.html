@@ -4,7 +4,31 @@
         <header class="section__header section__header--center">
             <p class="section__eyebrow">{{ gurucool.eyebrow }}</p>
             <h2 id="gurucool-title" class="section__title">{{ gurucool.title }}</h2>
+            <p class="gurucool-promo__subtitle">{{ gurucool.subtitle }}</p>
         </header>
+
+        <div class="gurucool-promo__intro-wrap">
+            <p class="gurucool-promo__intro">{{ gurucool.body }}</p>
+        </div>
+
+        <div class="gurucool-promo__offer-wrap">
+            <div class="section__header section__header--center">
+                <p class="section__eyebrow">What we offer</p>
+            </div>
+            <div class="card-grid card-grid--3">
+                {% for offer in gurucool.what_we_offer %}
+                    <article class="card card--innovation">
+                        <span class="card__number">{{ offer.step }}</span>
+                        <div class="card__icon" aria-hidden="true">
+                            {% include "website/partials/icons.html" with name=offer.icon %}
+                        </div>
+                        <h3 class="card__title">{{ offer.title }}</h3>
+                        <p class="card__text">{{ offer.description }}</p>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+
         <div class="gurucool-promo__stack">
             {% for slide in gurucool.slides %}
                 <figure class="gurucool-promo__item">
