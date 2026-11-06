@@ -648,6 +648,27 @@ a {
     text-decoration: underline;
 }
 
+/* ── Festive promo (above contact) ─────────────────────────── */
+.festive-promo {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.festive-promo__figure {
+    margin: 0;
+    max-width: min(920px, 100%);
+    margin-inline: auto;
+}
+
+.festive-promo__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
 /* ── Contact ───────────────────────────────────────────────── */
 .section--contact {
     padding-bottom: 4rem;
