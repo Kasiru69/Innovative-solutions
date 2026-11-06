@@ -171,6 +171,12 @@ CONTACT = {
         "We are interested in ideas, technologies, partnerships and opportunities "
         "that can create meaningful impact."
     ),
+    "phone_display": "+91 9836483772",
+    "phone_tel": "+919836483772",
+    "email": "gnovatech2026@gmail.com",
+    "address": (
+        "Headquartered in Kolkata, West Bengal, India | Serving Across India."
+    ),
 }
 
 GURUCOOL_AD = {

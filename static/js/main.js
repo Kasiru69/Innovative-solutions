@@ -65,7 +65,7 @@
 
     /* Scroll reveal */
     const revealElements = document.querySelectorAll(
-        ".section__header, .card, .timeline__step, .why-card, .about__content, .contact"
+        ".section__header, .card, .timeline__step, .why-card, .about__content, .contact, .contact__details, .hero__inner"
     );
 
     revealElements.forEach(function (el) {

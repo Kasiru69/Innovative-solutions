@@ -5,6 +5,30 @@
                 <p class="section__eyebrow">Get in Touch</p>
                 <h2 id="contact-title" class="section__title">{{ contact.title }}</h2>
                 <p class="contact__body">{{ contact.body }}</p>
+
+                <ul class="contact__details">
+                    <li class="contact__detail contact__detail--phone">
+                        <span class="contact__detail-icon" aria-hidden="true"></span>
+                        <div class="contact__detail-inner">
+                            <span class="contact__detail-label">Phone</span>
+                            <a class="contact__detail-value" href="tel:{{ contact.phone_tel }}">{{ contact.phone_display }}</a>
+                        </div>
+                    </li>
+                    <li class="contact__detail contact__detail--email">
+                        <span class="contact__detail-icon" aria-hidden="true"></span>
+                        <div class="contact__detail-inner">
+                            <span class="contact__detail-label">Email</span>
+                            <a class="contact__detail-value" href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+                        </div>
+                    </li>
+                    <li class="contact__detail contact__detail--address">
+                        <span class="contact__detail-icon" aria-hidden="true"></span>
+                        <div class="contact__detail-inner">
+                            <span class="contact__detail-label">Address</span>
+                            <span class="contact__detail-value">{{ contact.address }}</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
             <div class="contact__form-wrap">
